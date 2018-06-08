@@ -28,7 +28,8 @@ housing.data.copy1 <- housing.data
 housing.data.copy1$ptratio <- impute(housing.data.copy1$ptratio, mean)
 housing.data.copy1$rad  <- impute(housing.data.copy1$rad, mean)
 
-summary(housing.data.copy1)
+summary(housing.data.copy1$rad)
+summary(housing.data$rad)
 
 housing.data.copy2 <- housing.data
 housing.data.copy2$ptratio <- impute(housing.data.copy2$ptratio, median)

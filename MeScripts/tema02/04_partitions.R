@@ -53,3 +53,10 @@ data_2 <- rda.cb.partition3(data, 14, 0.8, 0.5)
 data_3 <- rda.cb.partition2(data2, 14, 0.8)
 data_4 <- rda.cb.partition3(data2, 14, 0.8, 0.5)
 
+head(data_1$val)
+
+sample1 <- sample(data$CRIM, 40, replace = F)
+
+
+
+

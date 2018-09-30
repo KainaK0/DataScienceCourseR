@@ -33,9 +33,28 @@ boxplot(mpg ~ cylinders, ylab = "Millas por Galeon", xlab = "Cyleders")
 boxplot(auto)
 
 #Scaterplot
-plot(mpg ~ horsepower)
+plot(mpg ~ horsepower, type = "n")
+linearmodel <- lm(mpg ~ horsepower)
+abline(linearmodel)
 
+#Agregar colores para cada cylindrada
+with(subset(auto,cylinders=="8cil"),
+     points(horsepower,mpg,col = "red"))
+
+with(subset(auto,cylinders=="6cil"), 
+     points(horsepower,mpg,col = "blue"))
+
+with(subset(auto,cylinders=="5cil"), 
+     points(horsepower,mpg,col = "green"))
+
+with(subset(auto,cylinders=="4cil"), 
+     points(horsepower,mpg,col = "pink"))
+
+with(subset(auto,cylinders=="3cil"), 
+     points(horsepower,mpg))
 #Matriz de Scaterplot
 
 pairs(~mpg+displacement+horsepower+weight)
+
+
 
